@@ -14,13 +14,14 @@
   	},
   	 "background": {
 
-        "scripts": ["script.js"]
-    },
-
+        "scripts": ["jquery-2.1.4.min.js","script.js"]
+    }
+    /*,
 	"browser_action": 
 	{
     		"default_title": "Chrome NLP",
     		"default_icon": "icon/icon-16.png",
     		"default_popup": "index.html"
   	}
+  	*/
 }
