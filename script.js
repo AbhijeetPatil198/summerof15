@@ -10,14 +10,11 @@ function goNLP(info,tab) {
     var txt = info.selectionText;
 
 
-    $.post("http://text-processing.com/api/sentiment/", {text: "great"}, function(data,status){
-    	alert('fuck1');
-    	alert(status);
-    	
+    $.post("http://text-processing.com/api/sentiment/", {text: "great"}).done( function(msg) { } )
+    .fail( function(xhr, textStatus, errorThrown) {
+        alert(xhr.responseText);
     });
-
-    //alert('fuck');
-
+    
 }
 
 chrome.contextMenus.create({
