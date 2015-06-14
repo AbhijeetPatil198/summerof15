@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+
+
+  	"name": "My First Extension",
+  	"version": "0.1.0",
+  	"description": "COOL",
+
+  	"icons": 
+	{ 
+    		"128": "icon/icon-128.png",
+    		"16": "icon/icon-16.png"
+  	},
+
+	"browser_action": 
+	{
+    		"default_title": "First Extension",
+    		"default_icon": "icon/icon-16.png",
+    		"default_popup": "index.html"
+  	}
+}
