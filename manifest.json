@@ -2,19 +2,24 @@
 	"manifest_version": 2,
 
 
-  	"name": "My First Extension",
+  	"name": "Chrome NLP",
   	"version": "0.1.0",
-  	"description": "COOL",
+  	"description": "Analyzes text",
+  	 "permissions": ["contextMenus"],
 
   	"icons": 
 	{ 
     		"128": "icon/icon-128.png",
     		"16": "icon/icon-16.png"
   	},
+  	 "background": {
+
+        "scripts": ["script.js"]
+    },
 
 	"browser_action": 
 	{
-    		"default_title": "First Extension",
+    		"default_title": "Chrome NLP",
     		"default_icon": "icon/icon-16.png",
     		"default_popup": "index.html"
   	}
