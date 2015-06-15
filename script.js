@@ -1,10 +1,7 @@
 function goNLP(info,tab) {
 	//write in console
     console.log("Word " + info.selectionText + " was clicked.");
-    //open a new tab
-    chrome.tabs.create({ 
-    	url: 'index.html'     
-    });
+   
     //some variables
     var query = info.selectionText;
     var res_data = '';
@@ -24,8 +21,20 @@ function goNLP(info,tab) {
   		async:false
 
 	});
-	//print output in pop up
-	alert(res_data);
+
+	var getSampleHTML = function() {
+        return 'javascript:\'<!doctype html><html>' +
+            '<title>Chrome NLP</title>' +
+            '<body style="width: 400px">' +
+            '<h1>Welcome to Chrome NLP!</h1>'+
+			'<h2 id ="query">You queried for :'+query+' </h2>'+
+			'<h2 id ="output">Output is : '+res_data+'</h2>' +
+            '</body>' +
+            '</html>\'';
+    };
+    chrome.tabs.create({ 
+    	url: getSampleHTML()     
+    });
 }
 
 
