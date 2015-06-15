@@ -5,7 +5,7 @@
   	"name": "Chrome NLP",
   	"version": "0.1.0",
   	"description": "Analyzes text",
-  	 "permissions": ["contextMenus"],
+  	"permissions": ["contextMenus","http://text-processing.com/"],
 
   	"icons": 
 	{ 
