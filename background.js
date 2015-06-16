@@ -4,7 +4,7 @@ function goNLP(info,tab) {
    
     //some variables
     var query = info.selectionText;
-    var res_data = '';
+    var res_data;
 	//interaction with server
 	$.ajax({
 
@@ -14,7 +14,7 @@ function goNLP(info,tab) {
 
  		data: { text : query },
 
- 		success: function(data, status){ res_data=JSON.stringify(data); },
+ 		success: function(data, status){ res_data=data; },
 
   		dataType: 'json',
 
@@ -22,13 +22,20 @@ function goNLP(info,tab) {
 
 	});
 
+
 	var getSampleHTML = function() {
         return 'javascript:\'<!doctype html><html>' +
             '<title>Chrome NLP</title>' +
             '<body style="width: 400px">' +
             '<h1>Welcome to Chrome NLP!</h1>'+
 			'<h2 id ="query">You queried for : '+query+' </h2>'+
-			'<h2 id ="output">Output is : '+res_data+'</h2>' +
+			'<h2 id ="output">Output is : </h2>' +
+            '<p> Sentiment = '+res_data.label+
+            '<br>Probabilities :<br>'+
+            'Positivity = '+res_data.probability.pos+
+            '<br>Negativity = '+res_data.probability.neg+
+            '<br>Neutral = '+res_data.probability.neutral+
+            ' </p>'+
             '</body>' +
             '</html>\'';
     };
