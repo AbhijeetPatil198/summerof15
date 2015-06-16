@@ -27,7 +27,7 @@ function goNLP(info,tab) {
             '<title>Chrome NLP</title>' +
             '<body style="width: 400px">' +
             '<h1>Welcome to Chrome NLP!</h1>'+
-			'<h2 id ="query">You queried for :'+query+' </h2>'+
+			'<h2 id ="query">You queried for : '+query+' </h2>'+
 			'<h2 id ="output">Output is : '+res_data+'</h2>' +
             '</body>' +
             '</html>\'';
