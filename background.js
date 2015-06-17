@@ -163,9 +163,9 @@ function goNLP(info,tab) {
 
 	var getSampleHTML = function() {
         var op_string1 =  'javascript:\'<!doctype html><html>' +
-            '<title>Chrome NLP</title>' +
+            '<title>NLP SUITE</title>' +
             '<body>' +
-            '<h1>Welcome to Chrome NLP!</h1>'+
+            '<h1>Welcome to NLP SUITE!</h1>'+
 			'<h2 id ="query">You queried for : '+query+' </h2>'+
 			'<h2 id ="output">Output is : </h2>' +
 
